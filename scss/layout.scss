@@ -56,10 +56,10 @@ header{
                 top:5%;
                 right:5%;
                 font-family: $police-bold;
-                color: darken($color-ter, 38);
+                color: darken($color-ter, 37);
                 font-size: 15px;
-                padding:10px 15px;
-                border-radius: 3px;
+                padding:6px 9px;
+                border-radius: 2px;
                 background-color: $color-ter;
             }
             p{
@@ -109,7 +109,7 @@ header{
         } 
     }
     &__accroche{
-        width: 90%;
+        width: $bloc-central;
         margin: 0 auto;
         text-align: center;
         h1{
@@ -130,6 +130,14 @@ header{
             background: linear-gradient(175deg, #ef74da, #a45cdb);
             color:$text-color-light;
             border: none;
+            box-shadow: 0px 5px 5px rgb(53 53 53 / 30%);
+        }
+    }
+    &__fonctionnement{
+        width:$bloc-central;
+        margin: 20px auto 0;
+        ol li{
+            list-style: decimal;
         }
     }
 }
