@@ -42,6 +42,7 @@ header{
     }
     &__contenu  {
         article{
+            position: relative;
             width: 100%;
             height: $card-taille;
             margin-bottom: 20px;
@@ -49,6 +50,18 @@ header{
             border-radius: 16px;
             overflow: hidden;
             box-shadow: 0 0 10px rgb(0 0 0 / 24%);
+            .nouveaute{
+                display: block;
+                position: absolute;
+                top:5%;
+                right:5%;
+                font-family: $police-bold;
+                color: darken($color-ter, 38);
+                font-size: 15px;
+                padding:10px 15px;
+                border-radius: 3px;
+                background-color: $color-ter;
+            }
             p{
                 margin:8px 0 10px 10px
             }
@@ -76,7 +89,26 @@ header{
     }
 }
 
-  
+.rechercher{
+    width:100%;
+    &__position{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        background-color: $color-position;
+        height:50px ;
+       
+        p{
+            margin-left: 15px;
+            font-family: $police-bold;
+            color:$color-footer;
+        }
+        i{
+            color:$color-footer;
+        }
+    }
+}
 
 /*footer*/
 footer{
