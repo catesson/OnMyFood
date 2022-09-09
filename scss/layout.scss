@@ -1,3 +1,4 @@
+/*générale*/
 body{
     min-width: $minwidth;
     font-family: $police-regular;
@@ -5,9 +6,23 @@ body{
 a{
     color:$text-color-dark;
 }
+p{
+    color: $text-color-dark;
+
+}
 header, footer{
     width:100%
 }
+h1, h2{
+    font-family: $police-bold;
+}
+h1{
+    font-size: 25px;
+}
+h2{
+    font-size: 18px;
+}
+/*header*/
 header{
 
     position: relative;
@@ -17,7 +32,53 @@ header{
         margin: 23px auto 14px;
     }
 }
+/*content*/
 
+.restaurants{
+    width: $bloc-central;
+    margin:0 auto;
+    h1{
+        margin: 20px 0 ;
+    }
+    &__contenu  {
+        article{
+            width: 100%;
+            height: $card-taille;
+            margin-bottom: 20px;
+            background-color: $color-card;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgb(0 0 0 / 24%);
+            p{
+                margin:8px 0 10px 10px
+            }
+            h2{
+                margin: 10px 0 0 10px;
+            }
+            img{
+                    width: 100%;
+                    height: $card-img-taille;
+                    object-fit:cover ;
+                }
+            } 
+        &--txt{
+            display: flex;
+            flex-wrap: wrap;
+            height: $card-txt-taille;
+            align-items: center;
+            div:nth-child(1){
+                width:85%
+            }
+            div:nth-child(2){
+                width:15%;
+            }
+        }
+    }
+}
+
+  
+
+/*footer*/
 footer{
     height: $footer-haureur;
     background-color: $color-footer;
