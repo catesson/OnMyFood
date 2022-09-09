@@ -22,6 +22,10 @@ body {
   font-family: "Raleway-regular", sans-serif;
 }
 
+a {
+  color: #000;
+}
+
 header, footer {
   width: 100%;
 }
@@ -55,8 +59,23 @@ footer .footer__content--logo {
   -webkit-mask-size: cover;
   mask: url(../images/logo/ohmyfood@2x.svg) no-repeat center cover;
 }
+footer .footer__content ul {
+  margin-top: 20px;
+}
 footer .footer__content ul li {
   list-style: none;
+  margin-top: 10px;
+}
+footer .footer__content ul li a {
+  color: #fff;
+  letter-spacing: 1px;
+}
+footer .footer__content ul li:nth-child(1) a {
+  margin-left: 16px;
+  font-weight: 500;
+}
+footer .footer__content ul li:nth-child(2) a {
+  margin-left: 10px;
 }
 
 body {

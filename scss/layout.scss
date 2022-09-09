@@ -2,6 +2,9 @@ body{
     min-width: $minwidth;
     font-family: $police-regular;
 }
+a{
+    color:$text-color-dark;
+}
 header, footer{
     width:100%
 }
@@ -33,8 +36,24 @@ footer{
             -webkit-mask-size:cover;
             mask: url(../images/logo/ohmyfood@2x.svg) no-repeat center cover;
         }
-        ul li{
+        ul {
+            margin-top: 20px;
+            li{
             list-style: none;
+            margin-top:10px;
+            }
+            li a{
+                color:$text-color-light;
+                letter-spacing: 1px;
+
+            }
+            li:nth-child(1) a{
+                margin-left: 16px;
+                font-weight: 500;
+            }
+            li:nth-child(2) a{
+                margin-left: 10px;
+            }
         }
     }
 }
