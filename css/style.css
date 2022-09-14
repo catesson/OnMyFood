@@ -189,12 +189,74 @@ header .return {
   text-align: center;
 }
 
+@keyframes apparition {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.3;
+  }
+  40% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .plats {
   width: 100%;
   margin-bottom: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.24);
   border-radius: 17px;
   overflow: hidden;
+  animation: apparition 300ms cubic-bezier(0.48, 0, 0.63, 1) both;
+}
+.plats-1 {
+  animation-delay: 100ms;
+}
+.plats-2 {
+  animation-delay: 170ms;
+}
+.plats-3 {
+  animation-delay: 240ms;
+}
+.plats-4 {
+  animation-delay: 310ms;
+}
+.plats-5 {
+  animation-delay: 380ms;
+}
+.plats-6 {
+  animation-delay: 450ms;
+}
+.plats-7 {
+  animation-delay: 520ms;
+}
+.plats-8 {
+  animation-delay: 590ms;
+}
+.plats-9 {
+  animation-delay: 660ms;
+}
+.plats-10 {
+  animation-delay: 730ms;
+}
+.plats-11 {
+  animation-delay: 800ms;
+}
+.plats-12 {
+  animation-delay: 870ms;
+}
+.plats-13 {
+  animation-delay: 940ms;
+}
+.plats-14 {
+  animation-delay: 1010ms;
+}
+.plats-15 {
+  animation-delay: 1080ms;
 }
 .plats h2 {
   max-width: 80%;

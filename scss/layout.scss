@@ -167,12 +167,43 @@ header{
     }
 }
 
+@keyframes apparition {
+    0%{
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    15%{
+        opacity: 0.3;
+    }
+    40%{
+        opacity: 0.5;
+    }
+    100%{   
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+}
+
+
 .plats{
     width: 100%;
     margin-bottom: 15px;
     box-shadow: 0 0 10px rgb(0 0 0 / 24%);
     border-radius: 17px;
     overflow: hidden;
+    $delay:100ms;
+    animation: apparition 300ms  cubic-bezier(.48,0,.63,1) both;
+    @for $i from 1 through 15
+    {
+        
+        &-#{$i}
+        {
+            animation-delay: $delay;
+        }
+        $delay:$delay+70ms;
+    }
+   
     h2{
         max-width: 80%;
         font-family: $police-bold;
