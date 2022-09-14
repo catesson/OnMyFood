@@ -20,7 +20,7 @@
 /* placholder*/
 /*générale*/
 body {
-  min-width: 200px;
+  min-width: 250px;
   font-family: "Raleway-regular", sans-serif;
 }
 
@@ -102,7 +102,7 @@ header .return {
   border-radius: 50px;
   font-size: 15px;
   font-family: "Raleway-bold", sans-serif;
-  background: linear-gradient(175deg, #ef74da, #a45cdb);
+  background: linear-gradient(175deg, #FF79DA, #9356DC);
   color: #fff;
   border: none;
   box-shadow: 0px 5px 5px rgba(53, 53, 53, 0.3);
@@ -110,9 +110,45 @@ header .return {
 .rechercher__fonctionnement {
   width: 90%;
   margin: 20px auto 0;
+  display: flex;
+  flex-direction: column;
 }
-.rechercher__fonctionnement ol li {
-  list-style: decimal;
+.rechercher__fonctionnement--etape {
+  float: right;
+  width: calc(100% - 12px);
+  height: 70px;
+  max-width: 420px;
+  margin: 0 auto 20px;
+  align-items: center;
+  background-color: #f6f6f6;
+  border-radius: 20px;
+  display: flex;
+  box-shadow: 0px 5px 5px rgba(53, 53, 53, 0.15);
+}
+.rechercher__fonctionnement--etape p:nth-child(1) {
+  margin-left: -12px;
+  text-align: center;
+  color: white;
+  width: 29px;
+  height: 25px;
+  border-radius: 13px;
+  line-height: 22px;
+  background-color: #9356DC;
+}
+.rechercher__fonctionnement--etape i {
+  text-align: center;
+  width: 20%;
+  color: #7e7e7e;
+}
+.rechercher__fonctionnement--etape p:nth-child(3) {
+  font-family: "Raleway-bold", sans-serif;
+  width: inherit;
+}
+.rechercher__fonctionnement--etape-3 {
+  background-color: rgba(147, 86, 220, 0.15);
+}
+.rechercher__fonctionnement--etape-3 i {
+  color: #9356DC;
 }
 
 /*content*/
@@ -153,64 +189,6 @@ header .return {
   text-align: center;
 }
 
-/*.plats{
-    width: 100%;
-    height: 70px;
-    margin-bottom: 15px;
-    box-shadow: 0 0 10px rgb(0 0 0 / 24%);
-    border-radius: 17px;
-    overflow: hidden;
-    h2{
-        max-width: 80%;
-        font-family: $police-bold;
-        margin: 0 0 5px 0;
-    }
-    p{
-        max-width: 80%;
-    }
-    a{
-        display: flex;
-        justify-content: space-between;
-        height: 100%;
-        height: fit-content;
-        &:hover 
-
-            .plats__content--button {
-            transform: scaleX(1);
-        }
-    }
-    &__content{
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 100%;
-        margin-left: 10px;
-        span{
-            display: block;
-            position: absolute;
-            font-family: $police-bold;
-            bottom:15px;
-            right: 20px;
-        }
-
-        &--button{
-            width: 60px;
-            height: 70px;
-            background-color: #a45cdb;
-            text-align: center;
-            transform: scaleX(0);
-            transform-origin: right;
-            transition: transform 1s;
-
-            i{
-                color:$color-card;
-                line-height: 70px;
-            }
-        }
-    }
-
-}*/
 .plats {
   width: 100%;
   margin-bottom: 15px;
@@ -222,13 +200,10 @@ header .return {
   max-width: 80%;
   font-family: "Raleway-bold", sans-serif;
   margin: 0 0 5px 0;
-  clear: both;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
 }
 .plats p {
   width: 80%;
+  height: 18px;
   clear: both;
   overflow: hidden;
   white-space: nowrap;
