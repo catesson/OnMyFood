@@ -32,11 +32,13 @@ p {
   color: #353535;
 }
 
-header, footer {
+header,
+footer {
   width: 100%;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-family: "Raleway-bold", sans-serif;
 }
 
