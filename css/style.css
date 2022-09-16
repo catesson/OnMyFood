@@ -277,35 +277,44 @@ header .return {
   display: flex;
   justify-content: space-between;
   height: 100%;
+  min-height: 70px;
 }
 .plats a:hover .plats__content--button i {
   animation: anim-button 400ms 100ms ease-in-out both;
 }
-.plats a:hover .plats__content--button {
-  margin-right: 0px;
+.plats a:hover .plats__prix {
+  transform: translateX(0);
 }
 .plats__content {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 90%;
+  min-width: 50%;
   margin-left: 10px;
 }
 .plats__content--button {
-  width: 90px;
+  width: 60px;
   background-color: #99E2D0;
-  margin-right: -90px;
   text-align: center;
-  transition: margin-right 400ms;
+  height: 100%;
+  display: flex;
+  justify-content: center;
 }
 .plats__content--button i {
   color: #fff;
-  line-height: 70px;
+  align-self: center;
+}
+.plats__prix {
+  max-width: 50%;
+  display: flex;
+  transform: translateX(60px);
+  transition: all 400ms ease-in-out;
 }
 .plats span {
   display: block;
   font-family: "Raleway-bold", sans-serif;
-  padding: 40px 15px 0 0;
+  align-self: flex-end;
+  margin: 0 10px 10px 0;
 }
 
 @keyframes anim-button {
