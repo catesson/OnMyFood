@@ -1,19 +1,7 @@
 @charset "UTF-8";
 /*font*/
-@font-face {
-  font-family: "Raleway-regular";
-  src: url("../fonts/Raleway-Regular.woff2") format("woff2"), url("../fonts/Raleway-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Raleway-bold";
-  src: url("../fonts/Raleway-Bold.woff2") format("woff2"), url("../fonts/Raleway-Bold.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 /* variable */
 /* fonction */
 /* mixin */
@@ -21,7 +9,7 @@
 /*générale*/
 body {
   min-width: 250px;
-  font-family: "Raleway-regular", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 a {
@@ -39,7 +27,8 @@ footer {
 
 h1,
 h2 {
-  font-family: "Raleway-bold", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
 }
 
 h1 {
@@ -79,7 +68,8 @@ header .return {
 }
 .rechercher__position p {
   margin-left: 15px;
-  font-family: "Raleway-bold", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
   color: #000;
 }
 .rechercher__position i {
@@ -108,7 +98,8 @@ header .return {
   height: 50px;
   border-radius: 50px;
   font-size: 15px;
-  font-family: "Raleway-bold", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
   background: linear-gradient(175deg, #FF79DA, #9356DC);
   color: #fff;
   border: none;
@@ -148,7 +139,8 @@ header .return {
   color: #7e7e7e;
 }
 .rechercher__fonctionnement--etape p:nth-child(3) {
-  font-family: "Raleway-bold", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
   width: inherit;
 }
 .rechercher__fonctionnement--etape-3 {
@@ -163,27 +155,38 @@ header .return {
   width: 100%;
   position: relative;
   z-index: 2;
-  margin-top: -60px;
-  margin-bottom: 30px;
+  margin: -60px auto 30px;
   background-color: #fff;
   border-radius: 50px;
+  max-width: 1920px;
 }
 .menu--img {
   position: relative;
   z-index: 1;
+  max-height: 300px;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 .menu--img img {
   width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+}
+.menu h1 {
+  padding: 40px 0 16px 0;
+  width: 90%;
+  margin: auto;
+  font-family: "Shrikhand", cursive;
+  font-size: 2.5em;
 }
 .menu__content {
   width: 90%;
   margin: 0 auto;
-}
-.menu__content h1 {
-  padding: 40px 0 16px 0;
+  display: flex;
+  flex-direction: column;
 }
 .menu__content H2 {
-  font-family: "Raleway-regular", sans-serif;
+  font-family: "Roboto", sans-serif;
   margin: 40px 0 30px 0;
 }
 .menu__content H2 span {
@@ -192,7 +195,7 @@ header .return {
 }
 .menu form {
   width: 90%;
-  margin: 0 auto;
+  margin: 15px auto 0;
   text-align: center;
 }
 
@@ -267,7 +270,8 @@ header .return {
 }
 .plats h2 {
   max-width: 80%;
-  font-family: "Raleway-bold", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
   margin: 0 0 5px 0;
 }
 .plats p {
@@ -317,7 +321,8 @@ header .return {
 }
 .plats span {
   display: block;
-  font-family: "Raleway-bold", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
   align-self: flex-end;
   margin: 0 10px 10px 0;
 }
@@ -356,7 +361,8 @@ header .return {
   position: absolute;
   top: 5%;
   right: 5%;
-  font-family: "Raleway-bold", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
   color: #2a947a;
   font-size: 15px;
   padding: 6px 9px;
@@ -484,10 +490,35 @@ footer .footer__content ul li:nth-child(2) a {
   .restaurants__contenu article {
     width: 45%;
   }
+  .menu {
+    margin-top: 0px;
+  }
+  .menu--img {
+    max-height: 400px;
+  }
+  .menu--img img {
+    max-height: 400px;
+    object-fit: cover;
+  }
 }
 @media all and (min-width: 992px) {
   .restaurants__contenu article {
     width: 22%;
+  }
+  .menu h1 {
+    width: 90%;
+    margin: 20px auto;
+  }
+  .menu__content {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .menu__content--categorie {
+    margin: 0 auto;
+    min-width: 420px;
+    width: 31%;
   }
 }
 

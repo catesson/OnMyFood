@@ -1,20 +1,7 @@
 /*font*/
-@font-face {
-    font-family: 'Raleway-regular';
-    src: url('../fonts/Raleway-Regular.woff2') format('woff2'),
-        url('../fonts/Raleway-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'Raleway-bold';
-    src: url('../fonts/Raleway-Bold.woff2') format('woff2'),
-        url('../fonts/Raleway-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
 /* variable */
 $color-prim:#9356DC;
 $color-sec:#FF79DA;
@@ -30,9 +17,14 @@ $taille-info-plat:calc(100% - 120px);
 $text-color-light:#fff;
 $text-color-dark:#000;
 $txt-color-grey:#7e7e7e;
-$police-regular:'Raleway-regular', sans-serif ;
-$police-bold:'Raleway-bold', sans-serif ;
+$police-regular:'Roboto', sans-serif;
+@mixin police-bold{
+    font-family: $police-regular;
+    font-weight: 500;
+}
+$police-titre:'Shrikhand', cursive;
 $minwidth:250px;
+$maxwidth:1920px;
 $bloc-central:90%;
 $footer-haureur:196px;
 
