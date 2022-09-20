@@ -28,6 +28,7 @@ header {
   position: relative;
   img {
     width: 45%;
+    max-width: 350px;
     display: block;
     margin: 23px auto 14px;
   }
@@ -55,6 +56,10 @@ header {
     i {
       color: $color-footer;
     }
+  }
+  h2{
+    width:90%;
+    margin: 20px auto;
   }
   &__accroche {
     width: $bloc-central;
@@ -219,7 +224,7 @@ header {
       .plats__content--button i {
         animation: anim-button 400ms 100ms ease-in-out both;
       }
-      .plats__prix{
+      .plats__prix {
         transform: translateX(0);
       }
     }
@@ -228,13 +233,13 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-width: 50%;
+    min-width: $taille-info-plat;
     margin-left: 10px;
     &--button {
       width: 60px;
       background-color: $color-ter;
       text-align: center;
-      height:100%;
+      height: 100%;
       display: flex;
       justify-content: center;
       i {
@@ -243,12 +248,11 @@ header {
       }
     }
   }
-  &__prix{
+  &__prix {
     max-width: 50%;
     display: flex;
     transform: translateX(60px);
     transition: all 400ms ease-in-out;
-
   }
   span {
     display: block;
@@ -273,6 +277,8 @@ header {
     margin: 20px 0;
   }
   &__contenu {
+    display: flex;
+    flex-direction: column;
     article {
       position: relative;
       width: 100%;
@@ -308,16 +314,38 @@ header {
     }
     &--txt {
       display: flex;
-      flex-wrap: wrap;
+      justify-content: space-between;
       height: $card-txt-taille;
       align-items: center;
       div:nth-child(1) {
-        width: 85%;
-      }
-      div:nth-child(2) {
-        width: 15%;
+        width: 80%;
       }
     }
+  }
+}
+.coeur {
+  margin-right: 50px;
+  height: 25px;
+  &__vide.fa-xl,
+  &__plein.fa-xl{
+    position: absolute;
+    line-height: 25px;
+  }
+  &__plein {
+    background: linear-gradient(
+      45deg,
+      $color-sec 0%,
+      $color-prim 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    clip-path: circle(0);
+    transition: clip-path 200ms ease-in-out;
+  }
+  &:hover > .coeur__plein {
+    clip-path: circle(100%);
   }
 }
 
@@ -379,5 +407,38 @@ footer {
     width: auto;
     height: 70px;
     background-color: pink;
+  }
+}
+
+@media all and (min-width:768px) {
+  .rechercher{
+    &__fonctionnement{
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      &--etape{
+        max-width: 30%;
+      }
+    }
+  }
+  .restaurants{
+    &__contenu{
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      article{
+        width:45%;
+        
+      }
+    }
+  }
+}
+@media all and (min-width:992px) {
+  .restaurants{
+    &__contenu{
+      article{
+        width:22%; 
+      }
+    }
   }
 }

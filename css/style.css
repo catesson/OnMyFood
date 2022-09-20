@@ -56,6 +56,7 @@ header {
 }
 header img {
   width: 45%;
+  max-width: 350px;
   display: block;
   margin: 23px auto 14px;
 }
@@ -83,6 +84,10 @@ header .return {
 }
 .rechercher__position i {
   color: #353535;
+}
+.rechercher h2 {
+  width: 90%;
+  margin: 20px auto;
 }
 .rechercher__accroche {
   width: 90%;
@@ -289,7 +294,7 @@ header .return {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-width: 50%;
+  min-width: calc(100% - 120px);
   margin-left: 10px;
 }
 .plats__content--button {
@@ -332,6 +337,10 @@ header .return {
 .restaurants h1 {
   margin: 20px 0;
 }
+.restaurants__contenu {
+  display: flex;
+  flex-direction: column;
+}
 .restaurants__contenu article {
   position: relative;
   width: 100%;
@@ -367,15 +376,33 @@ header .return {
 }
 .restaurants__contenu--txt {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-between;
   height: 78px;
   align-items: center;
 }
 .restaurants__contenu--txt div:nth-child(1) {
-  width: 85%;
+  width: 80%;
 }
-.restaurants__contenu--txt div:nth-child(2) {
-  width: 15%;
+
+.coeur {
+  margin-right: 50px;
+  height: 25px;
+}
+.coeur__vide.fa-xl, .coeur__plein.fa-xl {
+  position: absolute;
+  line-height: 25px;
+}
+.coeur__plein {
+  background: linear-gradient(45deg, #FF79DA 0%, #9356DC 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  clip-path: circle(0);
+  transition: clip-path 200ms ease-in-out;
+}
+.coeur:hover > .coeur__plein {
+  clip-path: circle(100%);
 }
 
 /*footer*/
@@ -438,6 +465,30 @@ footer .footer__content ul li:nth-child(2) a {
   width: auto;
   height: 70px;
   background-color: pink;
+}
+
+@media all and (min-width: 768px) {
+  .rechercher__fonctionnement {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .rechercher__fonctionnement--etape {
+    max-width: 30%;
+  }
+  .restaurants__contenu {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .restaurants__contenu article {
+    width: 45%;
+  }
+}
+@media all and (min-width: 992px) {
+  .restaurants__contenu article {
+    width: 22%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
