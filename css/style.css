@@ -8,7 +8,7 @@
 /* placholder*/
 /*générale*/
 body {
-  min-width: 250px;
+  min-width: 300px;
   font-family: "Roboto", sans-serif;
 }
 
@@ -43,20 +43,83 @@ h2 {
   font-size: 18px;
 }
 
+button {
+  cursor: pointer;
+  width: 220px;
+  height: 50px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  background: linear-gradient(175deg, #FF79DA, #9356DC);
+  color: #fff;
+  border: none;
+  box-shadow: 0px 5px 5px rgba(53, 53, 53, 0.3);
+}
+button:hover {
+  background: linear-gradient(175deg, #ff8de0, #9e67e0);
+  box-shadow: 0px 5px 5px rgba(53, 53, 53, 0.5);
+}
+
+@keyframes loadSpin {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes rotateSpin {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
+#loadingSpinner {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: 1;
+  animation: loadSpin 2s ease-in-out both;
+}
+#loadingSpinner::after {
+  content: " ";
+  align-self: center;
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  border-radius: 50%;
+  border: 10px solid;
+  border-color: #9356DC #FF79DA;
+  animation: rotateSpin 1s 2 linear;
+}
+
 /*header*/
 header {
+  display: flex;
   position: relative;
+  max-width: 1920px;
+  margin: auto;
 }
 header img {
   width: 45%;
   max-width: 350px;
   display: block;
-  margin: 23px auto 14px;
+  margin: auto;
+  padding: 23px 0 14px;
 }
 header .return {
   position: absolute;
   left: 20px;
-  top: 6px;
+  align-self: center;
 }
 
 .rechercher {
@@ -95,19 +158,6 @@ header .return {
 .rechercher__accroche p {
   margin: 20px 0;
   font-size: 16px;
-}
-.rechercher__accroche--button {
-  cursor: pointer;
-  width: 220px;
-  height: 50px;
-  border-radius: 50px;
-  font-size: 15px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  background: linear-gradient(175deg, #FF79DA, #9356DC);
-  color: #fff;
-  border: none;
-  box-shadow: 0px 5px 5px rgba(53, 53, 53, 0.3);
 }
 .rechercher__fonctionnement {
   width: 90%;
@@ -163,6 +213,16 @@ header .return {
   background-color: #fff;
   border-radius: 50px;
   max-width: 1920px;
+  padding: 40px 0 16px 0;
+}
+.menu__head {
+  width: 90%;
+  display: flex;
+  margin: auto;
+}
+.menu__head .coeur {
+  align-self: center;
+  margin-right: 20px;
 }
 .menu--img {
   position: relative;
@@ -177,7 +237,7 @@ header .return {
   object-fit: cover;
 }
 .menu h1 {
-  padding: 40px 0 16px 0;
+  align-self: center;
   width: 90%;
   margin: auto;
   font-family: "Shrikhand", cursive;
@@ -273,13 +333,11 @@ header .return {
   animation-delay: 1080ms;
 }
 .plats h2 {
-  max-width: 80%;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   margin: 0 0 5px 0;
 }
 .plats p {
-  width: 80%;
   height: 18px;
   clear: both;
   overflow: hidden;
@@ -296,7 +354,7 @@ header .return {
   animation: anim-button 400ms 100ms ease-in-out both;
 }
 .plats a:hover .plats__prix {
-  transform: translateX(1px);
+  margin-right: 0px;
 }
 .plats__content {
   display: flex;
@@ -320,8 +378,8 @@ header .return {
 .plats__prix {
   max-width: 50%;
   display: flex;
-  transform: translateX(61px);
-  transition: all 400ms ease-in-out;
+  margin-right: -61px;
+  transition: margin-right 400ms ease-in-out;
 }
 .plats span {
   display: block;
@@ -329,6 +387,7 @@ header .return {
   font-weight: 500;
   align-self: flex-end;
   margin: 0 10px 10px 0;
+  padding-left: 5px;
 }
 
 @keyframes anim-button {
