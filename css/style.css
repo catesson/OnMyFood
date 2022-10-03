@@ -7,13 +7,13 @@
 /* mixin */
 /* placholder*/
 /*générale*/
-html {
-  min-height: 100vh;
-}
-
 body {
   min-width: 250px;
   font-family: "Roboto", sans-serif;
+}
+
+main {
+  min-height: 77vh;
 }
 
 a {
@@ -26,8 +26,6 @@ p {
 
 header,
 footer {
-  position: absolute;
-  bottom: 0%;
   width: 100%;
 }
 
@@ -419,7 +417,7 @@ header .return {
 
 /*footer*/
 footer {
-  height: 196px;
+  height: 199px;
   background-color: #353535;
   color: #fff;
 }
