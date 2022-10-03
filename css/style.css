@@ -7,6 +7,10 @@
 /* mixin */
 /* placholder*/
 /*générale*/
+html {
+  min-height: 100vh;
+}
+
 body {
   min-width: 250px;
   font-family: "Roboto", sans-serif;
@@ -22,6 +26,8 @@ p {
 
 header,
 footer {
+  position: absolute;
+  bottom: 0%;
   width: 100%;
 }
 
@@ -430,7 +436,7 @@ footer .footer__content--logo {
   margin-top: 25px;
   -webkit-mask: url(../images/logo/ohmyfood@2x.svg) no-repeat center;
   -webkit-mask-size: cover;
-  mask: url(../images/logo/ohmyfood@2x.svg) no-repeat center cover;
+  mask: url(../images/logo/ohmyfood@2x.svg) no-repeat center;
 }
 footer .footer__content ul {
   margin-top: 15px;

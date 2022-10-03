@@ -1,8 +1,13 @@
 /*générale*/
+html{
+  min-height: 100vh;
+}
 body {
   min-width: $minwidth;
   font-family: $police-regular;
+
 }
+
 a {
   color: $text-color-dark;
 }
@@ -11,6 +16,8 @@ p {
 }
 header,
 footer {
+  position: absolute;
+  bottom:0%;
   width: 100%;
 }
 h1,
@@ -378,7 +385,7 @@ footer {
       margin-top: 25px;
       -webkit-mask: url(../images/logo/ohmyfood@2x.svg) no-repeat center;
       -webkit-mask-size: cover;
-      mask: url(../images/logo/ohmyfood@2x.svg) no-repeat center cover;
+      mask: url(../images/logo/ohmyfood@2x.svg) no-repeat center ;
     }
     ul {
       margin-top: 15px;
