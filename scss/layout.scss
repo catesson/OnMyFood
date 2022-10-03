@@ -241,7 +241,7 @@ header {
         animation: anim-button 400ms 100ms ease-in-out both;
       }
       .plats__prix {
-        transform: translateX(0);
+        transform: translateX(1px);
       }
     }
   }
@@ -267,7 +267,7 @@ header {
   &__prix {
     max-width: 50%;
     display: flex;
-    transform: translateX(60px);
+    transform: translateX(61px);
     transition: all 400ms ease-in-out;
   }
   span {
@@ -378,11 +378,12 @@ footer {
     &--logo {
       width: 116px;
       height: 20px;
-      background-color: white;
       margin-top: 25px;
-      -webkit-mask: url(../images/logo/ohmyfood@2x.svg) no-repeat center;
-      -webkit-mask-size: cover;
-      mask: url(../images/logo/ohmyfood@2x.svg) no-repeat center ;
+      p{
+        font-family: $police-titre;
+        font-size: 1.5em;
+        color: white;
+      }
     }
     ul {
       margin-top: 15px;

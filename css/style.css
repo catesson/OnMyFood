@@ -296,7 +296,7 @@ header .return {
   animation: anim-button 400ms 100ms ease-in-out both;
 }
 .plats a:hover .plats__prix {
-  transform: translateX(0);
+  transform: translateX(1px);
 }
 .plats__content {
   display: flex;
@@ -320,7 +320,7 @@ header .return {
 .plats__prix {
   max-width: 50%;
   display: flex;
-  transform: translateX(60px);
+  transform: translateX(61px);
   transition: all 400ms ease-in-out;
 }
 .plats span {
@@ -430,11 +430,12 @@ footer .footer__content {
 footer .footer__content--logo {
   width: 116px;
   height: 20px;
-  background-color: white;
   margin-top: 25px;
-  -webkit-mask: url(../images/logo/ohmyfood@2x.svg) no-repeat center;
-  -webkit-mask-size: cover;
-  mask: url(../images/logo/ohmyfood@2x.svg) no-repeat center;
+}
+footer .footer__content--logo p {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.5em;
+  color: white;
 }
 footer .footer__content ul {
   margin-top: 15px;
